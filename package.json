@@ -16,6 +16,12 @@
     "url": "https://github.com/Priyeshvg/PeakAi-n8n.git"
   },
   "main": "index.js",
+  "files": [
+    "credentials",
+    "*.js",
+    "LICENSE",
+    "README.md"
+  ],
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
