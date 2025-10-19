@@ -1,8 +1,9 @@
-const SimpleTestNode = require('./simple-test-node.js');
-
 module.exports = {
     nodes: [
-        SimpleTestNode
+        './simple-test-node.js',
+        './peak-ai-node.js'
     ],
-    credentials: []
+    credentials: [
+        './peak-ai-credentials.js'
+    ]
 };
