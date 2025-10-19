@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-peak-ai",
-  "version": "1.4.14",
+  "version": "1.4.15",
   "description": "Peak AI LinkedIn contact lookup",
   "license": "MIT",
   "author": "Peak AI <pg@thepeakai.com>",
