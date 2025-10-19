@@ -137,4 +137,4 @@ class PeakAiNode {
     }
 }
 
-module.exports = { nodeClass: PeakAiNode };
+module.exports = { PeakAiNode };

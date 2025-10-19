@@ -26,4 +26,4 @@ class PeakAiApi {
     ];
 }
 
-module.exports = { credentialClass: PeakAiApi };
+module.exports = { PeakAiApi };

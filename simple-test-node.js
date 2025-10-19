@@ -1,3 +1,5 @@
+const { INodeType, INodeTypeDescription } = require('n8n-workflow');
+
 class SimpleTestNode {
     description = {
         displayName: 'Simple Test',
@@ -25,4 +27,4 @@ class SimpleTestNode {
     }
 }
 
-module.exports = { nodeClass: SimpleTestNode };
+module.exports = { SimpleTestNode };
