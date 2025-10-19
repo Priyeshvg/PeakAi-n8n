@@ -1,5 +1,3 @@
-const { INodeType, INodeTypeDescription } = require('n8n-workflow');
-
 class SimpleTestNode {
     description = {
         displayName: 'Simple Test',
