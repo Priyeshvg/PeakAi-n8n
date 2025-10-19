@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-peak-ai",
-  "version": "1.4.22",
+  "version": "1.4.23",
   "description": "Peak AI LinkedIn contact lookup",
   "license": "MIT",
   "keywords": [
@@ -23,7 +23,7 @@
       "peak-ai-node.js"
     ],
     "credentials": [
-      "credentials/peak-ai-credentials.js"
+      "peak-ai-credentials.js"
     ]
   },
   "peerDependencies": {
