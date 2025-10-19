@@ -3,14 +3,13 @@
   "version": "1.4.15",
   "description": "Peak AI LinkedIn contact lookup",
   "license": "MIT",
-  "author": "Peak AI <pg@thepeakai.com>",
   "keywords": [
     "n8n-community-node-package",
     "peak-ai"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Priyeshvg/PeakAi-n8n.git"
+  "author": {
+    "name": "Peak AI",
+    "email": "pg@thepeakai.com"
   },
   "main": "index.js",
   "n8n": {
