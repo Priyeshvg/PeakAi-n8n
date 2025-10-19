@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-peak-ai",
-  "version": "1.4.21",
+  "version": "1.4.20",
   "description": "Peak AI LinkedIn contact lookup",
   "license": "MIT",
   "keywords": [
@@ -16,12 +16,6 @@
     "url": "https://github.com/Priyeshvg/PeakAi-n8n.git"
   },
   "main": "index.js",
-  "files": [
-    "credentials",
-    "*.js",
-    "LICENSE",
-    "README.md"
-  ],
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
