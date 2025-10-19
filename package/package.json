@@ -14,12 +14,9 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "simple-test-node.js",
-      "peak-ai-node.js"
+      "simple-test-node.js"
     ],
-    "credentials": [
-      "peak-ai-credentials.js"
-    ]
+    "credentials": []
   },
   "peerDependencies": {
     "n8n-workflow": "^1.0.0"
