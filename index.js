@@ -4,6 +4,6 @@ module.exports = {
         './peak-ai-node.js'
     ],
     credentials: [
-        './peak-ai-credentials.js'
+        './PeakAiApi.credentials.js'
     ]
 };
