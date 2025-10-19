@@ -11,6 +11,10 @@
     "name": "Peak AI",
     "email": "pg@thepeakai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Priyeshvg/PeakAi-n8n.git"
+  },
   "main": "index.js",
   "n8n": {
     "n8nNodesApiVersion": 1,
