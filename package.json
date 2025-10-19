@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-peak-ai",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Peak AI LinkedIn contact lookup",
   "keywords": [
     "n8n-community-node-package",
