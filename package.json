@@ -23,7 +23,7 @@
       "peak-ai-node.js"
     ],
     "credentials": [
-      "peak-ai-credentials.js"
+      "credentials/peak-ai-credentials.js"
     ]
   },
   "peerDependencies": {
