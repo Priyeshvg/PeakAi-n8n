@@ -1,5 +1,5 @@
 {
-	"name": "@priyeshvg/n8n-nodes-peakai",
+	"name": "n8n-nodes-peak-ai",
 	"version": "0.1.0",
 	"description": "n8n community node for Peak AI - Enrich LinkedIn profiles with contact information",
 	"license": "MIT",
