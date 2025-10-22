@@ -29,11 +29,25 @@ export class PeakAiApi implements ICredentialType {
 			required: true,
 		},
 	];
+
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://automation.sayf.in',
 			url: '/webhook/login',
 			method: 'POST',
+			body: {
+				email: '={{$credentials.email}}',
+				password: '={{$credentials.password}}',
+			},
 		},
+		rules: [
+			{
+				type: 'responseSuccessBody',
+				properties: {
+					key: 'access_token',
+					message: 'Invalid credentials or API error',
+				},
+			},
+		],
 	};
 }

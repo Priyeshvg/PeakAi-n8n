@@ -28,7 +28,7 @@ export class PeakAi implements INodeType {
 				typeOptions: { password: true },
 				default: '',
 				required: true,
-				description: 'Access token from Peak AI Auth node',
+				description: 'Access token from Peak AI Auth node (valid for 14 days)',
 				placeholder: 'Enter access token from Peak AI Auth',
 			},
 			{
@@ -37,6 +37,12 @@ export class PeakAi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Check Credits',
+						value: 'checkCredits',
+						description: 'Check remaining API credits',
+						action: 'Check credits',
+					},
 					{
 						name: 'Get Phone Number',
 						value: 'getPhone',
@@ -68,6 +74,11 @@ export class PeakAi implements INodeType {
 				displayName: 'LinkedIn URL',
 				name: 'linkedinUrl',
 				type: 'string',
+				displayOptions: {
+					hide: {
+						operation: ['checkCredits'],
+					},
+				},
 				default: '',
 				required: true,
 				description: 'LinkedIn profile URL or username',
@@ -84,6 +95,23 @@ export class PeakAi implements INodeType {
 			try {
 				const accessToken = this.getNodeParameter('accessToken', i) as string;
 				const operation = this.getNodeParameter('operation', i) as string;
+
+				if (operation === 'checkCredits') {
+					const response = await this.helpers.httpRequest({
+						method: 'GET',
+						url: `https://automation.sayf.in/webhook/get_credits_api?access_token=${accessToken}`,
+						json: true,
+					});
+
+					returnData.push({
+						json: {
+							credits: response.credits || 0,
+						},
+						pairedItem: { item: i },
+					});
+					continue;
+				}
+
 				let linkedinUrl = this.getNodeParameter('linkedinUrl', i) as string;
 
 				// Normalize LinkedIn URL
@@ -101,7 +129,6 @@ export class PeakAi implements INodeType {
 				};
 
 				if (operation === 'getAll') {
-					// Get all contact information
 					const types = ['phone_no', 'email', 'work_email'];
 					
 					for (const type of types) {
@@ -120,12 +147,10 @@ export class PeakAi implements INodeType {
 								result.secondaryEmail = response.work_email[0].item;
 							}
 						} catch {
-							// Continue if one type fails
 							continue;
 						}
 					}
 				} else {
-					// Get specific information
 					const typeMap: { [key: string]: string } = {
 						getPhone: 'phone_no',
 						getEmail: 'email',
@@ -157,7 +182,7 @@ export class PeakAi implements INodeType {
 					returnData.push({
 						json: {
 							error: (error as Error).message,
-							linkedinUrl: this.getNodeParameter('linkedinUrl', i) as string,
+							linkedinUrl: this.getNodeParameter('linkedinUrl', i, '') as string,
 						},
 						pairedItem: { item: i },
 					});
