@@ -16,7 +16,7 @@ export class PeakAiApi implements ICredentialType {
 			name: 'email',
 			type: 'string',
 			default: '',
-			placeholder: 'your-email@example.com',
+			placeholder: 'pg@thepeakai.com',
 			required: true,
 		},
 		{
@@ -39,10 +39,10 @@ export class PeakAiApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://automation.sayf.in',
-			url: '/webhook/login',
+			url: '/webhook/token',
 			method: 'POST',
 			body: {
-				email: '={{$credentials.email}}',
+				id: '={{$credentials.email}}',
 				password: '={{$credentials.password}}',
 			},
 		},

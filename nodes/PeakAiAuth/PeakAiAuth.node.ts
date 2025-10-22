@@ -43,7 +43,7 @@ export class PeakAiAuth implements INodeType {
 
 				const response = await this.helpers.httpRequest({
 					method: 'POST',
-					url: 'https://automation.sayf.in/webhook/login',
+					url: 'https://automation.sayf.in/webhook/token',
 					body,
 					json: true,
 				});
