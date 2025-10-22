@@ -1,0 +1,17 @@
+{
+	"node": "n8n-nodes-peakai.peakAi",
+	"nodeVersion": "1.0",
+	"codex": {
+		"categories": ["Development"],
+		"subcategories": {
+			"Development": ["Data Enrichment"]
+		},
+		"resources": {
+			"primaryDocumentation": [
+				{
+					"url": "https://automation.sayf.in"
+				}
+			]
+		}
+	}
+}
