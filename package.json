@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-peak-ai",
-	"version": "1.5.0",
+	"version": "1.6.0",
 	"description": "n8n community node for Peak AI - Enrich LinkedIn profiles with contact information",
 	"license": "MIT",
 	"homepage": "https://github.com/Priyeshvg/PeakAi-n8n",
@@ -28,20 +28,20 @@
 		"dist"
 	],
 	"n8n": {
-  "n8nNodesApiVersion": 1,
-  "strict": true,
-  "credentials": [
-    "dist/credentials/PeakAiApi.credentials.js"
-  ],
-  "nodes": [
-    "dist/nodes/PeakAiAuth/PeakAiAuth.node.js",
-    "dist/nodes/PeakAiEnrich/PeakAiEnrich.node.js",
-    "dist/nodes/PeakAiPhone/PeakAiPhone.node.js",
-    "dist/nodes/PeakAiEmail/PeakAiEmail.node.js",
-    "dist/nodes/PeakAiWorkEmail/PeakAiWorkEmail.node.js",
-    "dist/nodes/PeakAiCredits/PeakAiCredits.node.js"
-  ]
-},
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/PeakAiApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/PeakAiAuth/PeakAiAuth.node.js",
+			"dist/nodes/PeakAiEnrich/PeakAiEnrich.node.js",
+			"dist/nodes/PeakAiPhone/PeakAiPhone.node.js",
+			"dist/nodes/PeakAiEmail/PeakAiEmail.node.js",
+			"dist/nodes/PeakAiWorkEmail/PeakAiWorkEmail.node.js",
+			"dist/nodes/PeakAiCredits/PeakAiCredits.node.js"
+		]
+	},
 	"devDependencies": {
 		"@n8n/node-cli": "*",
 		"eslint": "9.32.0",
