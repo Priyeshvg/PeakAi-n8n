@@ -46,5 +46,15 @@ export class PeakAiApi implements ICredentialType {
 				password: '={{$credentials.password}}',
 			},
 		},
+		rules: [
+			{
+				type: 'responseSuccessBody',
+				properties: {
+					key: 'access_token',
+					value: '/.+/',
+					message: 'Invalid email or password',
+				},
+			},
+		],
 	};
 }
