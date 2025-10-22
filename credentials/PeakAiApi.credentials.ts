@@ -45,6 +45,7 @@ export class PeakAiApi implements ICredentialType {
 				type: 'responseSuccessBody',
 				properties: {
 					key: 'access_token',
+					value: '.*',
 					message: 'Invalid credentials or API error',
 				},
 			},

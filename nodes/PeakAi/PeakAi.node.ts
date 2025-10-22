@@ -44,10 +44,10 @@ export class PeakAi implements INodeType {
 						action: 'Check credits',
 					},
 					{
-						name: 'Get Phone Number',
-						value: 'getPhone',
-						description: 'Extract phone number from LinkedIn profile',
-						action: 'Get phone number',
+						name: 'Get Many',
+						value: 'getAll',
+						description: 'Extract many available contact information',
+						action: 'Get many contact info',
 					},
 					{
 						name: 'Get Personal Email',
@@ -56,16 +56,16 @@ export class PeakAi implements INodeType {
 						action: 'Get personal email',
 					},
 					{
+						name: 'Get Phone Number',
+						value: 'getPhone',
+						description: 'Extract phone number from LinkedIn profile',
+						action: 'Get phone number',
+					},
+					{
 						name: 'Get Secondary Email',
 						value: 'getWorkEmail',
 						description: 'Extract work/secondary email from LinkedIn profile',
 						action: 'Get secondary email',
-					},
-					{
-						name: 'Get Many',
-						value: 'getAll',
-						description: 'Extract many available contact information',
-						action: 'Get many contact info',
 					},
 				],
 				default: 'getAll',

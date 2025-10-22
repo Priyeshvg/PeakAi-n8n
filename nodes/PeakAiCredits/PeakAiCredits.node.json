@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-peak-ai.peakAiCredits",
+	"nodeVersion": "1.0",
+	"codex": {
+		"categories": ["Development"],
+		"subcategories": {
+			"Development": ["Data Enrichment"]
+		},
+		"resources": {
+			"primaryDocumentation": [
+				{
+					"url": "https://automation.sayf.in"
+				}
+			]
+		},
+		"alias": ["credits", "balance", "usage"]
+	}
+}
