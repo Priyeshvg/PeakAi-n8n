@@ -1,4 +1,5 @@
 import {
+	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
@@ -30,6 +31,11 @@ export class PeakAiApi implements ICredentialType {
 		},
 	];
 
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {},
+	};
+
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://automation.sayf.in',
@@ -40,15 +46,5 @@ export class PeakAiApi implements ICredentialType {
 				password: '={{$credentials.password}}',
 			},
 		},
-		rules: [
-			{
-				type: 'responseSuccessBody',
-				properties: {
-					key: 'access_token',
-					value: '.*',
-					message: 'Invalid credentials or API error',
-				},
-			},
-		],
 	};
 }
