@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-peak-ai",
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"description": "n8n community node for Peak AI - Enrich LinkedIn profiles with contact information",
 	"license": "MIT",
 	"homepage": "https://github.com/Priyeshvg/PeakAi-n8n",
