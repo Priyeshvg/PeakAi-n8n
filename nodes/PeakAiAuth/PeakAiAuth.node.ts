@@ -37,7 +37,7 @@ export class PeakAiAuth implements INodeType {
 		for (let i = 0; i < items.length; i++) {
 			try {
 				const body = {
-					email: credentials.email,
+					id: credentials.email,
 					password: credentials.password,
 				};
 
