@@ -8,7 +8,7 @@ import {
 export class PeakAiApi implements ICredentialType {
 	name = 'peakAiApi';
 	displayName = 'Peak AI API';
-	documentationUrl = 'https://automation.sayf.in';
+	documentationUrl = 'https://thepeakai.com';
 	icon = 'file:peakai.svg' as const;
 	properties: INodeProperties[] = [
 		{
@@ -16,8 +16,9 @@ export class PeakAiApi implements ICredentialType {
 			name: 'email',
 			type: 'string',
 			default: '',
-			placeholder: 'pg@thepeakai.com',
+			placeholder: 'your@email.com',
 			required: true,
+			description: 'Your Peak AI account email',
 		},
 		{
 			displayName: 'Password',
@@ -28,12 +29,18 @@ export class PeakAiApi implements ICredentialType {
 			},
 			default: '',
 			required: true,
+			description: 'Your Peak AI account password',
 		},
 	];
 
 	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
-		properties: {},
+		properties: {
+			body: {
+				id: '={{$credentials.email}}',
+				password: '={{$credentials.password}}',
+			},
+		},
 	};
 
 	test: ICredentialTestRequest = {
@@ -41,10 +48,6 @@ export class PeakAiApi implements ICredentialType {
 			baseURL: 'https://automation.sayf.in',
 			url: '/webhook/token',
 			method: 'POST',
-			body: {
-				id: '={{$credentials.email}}',
-				password: '={{$credentials.password}}',
-			},
 		},
 		rules: [
 			{

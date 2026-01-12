@@ -1,0 +1,14 @@
+{
+	"node": "n8n-nodes-base.peakAi",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Marketing & Content"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://thepeakai.com"
+			}
+		]
+	},
+	"alias": ["linkedin", "enrich", "contact", "phone", "email", "lead"]
+}

@@ -1,11 +1,16 @@
 {
 	"name": "n8n-nodes-peak-ai",
-	"version": "1.6.5",
+	"version": "2.0.0",
 	"description": "n8n community node for Peak AI - Enrich LinkedIn profiles with contact information",
 	"license": "MIT",
 	"homepage": "https://github.com/Priyeshvg/PeakAi-n8n",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"linkedin",
+		"enrichment",
+		"contact",
+		"phone",
+		"email"
 	],
 	"author": {
 		"name": "Priyesh Gandhi",
@@ -29,17 +34,11 @@
 	],
 	"n8n": {
 		"n8nNodesApiVersion": 1,
-		"strict": true,
 		"credentials": [
 			"dist/credentials/PeakAiApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/PeakAiAuth/PeakAiAuth.node.js",
-			"dist/nodes/PeakAiEnrich/PeakAiEnrich.node.js",
-			"dist/nodes/PeakAiPhone/PeakAiPhone.node.js",
-			"dist/nodes/PeakAiEmail/PeakAiEmail.node.js",
-			"dist/nodes/PeakAiWorkEmail/PeakAiWorkEmail.node.js",
-			"dist/nodes/PeakAiCredits/PeakAiCredits.node.js"
+			"dist/nodes/PeakAi/PeakAi.node.js"
 		]
 	},
 	"devDependencies": {
